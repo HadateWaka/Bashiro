@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+    <title>Samurajska Estetyka</title>
+    <style>
+        /* Globalne ustawienia */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #E0E0E0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-y: scroll; /* Włączamy przewijanie strony */
+            box-sizing: border-box;
+        }
+
+        /* Główny kontener */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        /* Nagłówek */
+        .header {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #E0E0E0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+        }
+
+        /* Sekcja obrazków */
+        .image-section {
+            display: flex;
+            justify-content: space-around;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 48%;
+            min-width: 500px;
+            background-color: #333333;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%) contrast(80%);
+        }
+
+        /* Cytaty poniżej obrazków */
+        .quote {
+            background-color: #222222;
+            color: #E0E0E0;
+            font-size: 1.2em;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 20px 30px;
+            margin-top: -10px; /* Zbliżenie cytatu do obrazka */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container:hover .quote {
+            opacity: 0.9;
+        }
+
+        /* Sekcja z tekstem */
+        .text-section {
+            margin-top: 100px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #E0E0E0;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .text-section p {
+            margin-bottom: 30px;
+        }
+
+        .text-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 1.5px;
+            color: #E0E0E0;
+        }
+
+        /* Stylizacja dla mniejszych ekranów */
+        @media (max-width: 768px) {
+            .header {
+                font-size: 2em;
+            }
+
+            .image-container {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .image-container img {
+                height: 350px;
+            }
+
+            .image-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .text-section {
+                font-size: 1em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Nagłówek -->
+        <div class="header">
+            Samurajska Estetyka
+        </div>
+
+        <!-- Sekcja obrazków -->
+        <div class="image-section">
+            <!-- Obrazek 1 -->
+            <div class="image-container">
+                <img src="https://via.placeholder.com/800x500.png/000000/FFFFFF?text=Samurai+Image+1" alt="Samurai Image 1">
+                <div class="quote">"Moc w spokoju, spokój w mocy."</div>
+            </div>
+            <!-- Obrazek 2 -->
+            <div class="image-container">
+                <img src="https://via.placeholder.com/800x500.png/000000/FFFFFF?text=Samurai+Image+2" alt="Samurai Image 2">
+                <div class="quote">"Samuraj to wojownik nie tylko z bronią, ale z duchem."</div>
+            </div>
+        </div>
+
+        <!-- Sekcja z tekstem -->
+        <div class="text-section">
+            <h2>Filozofia samuraja</h2>
+            <p>Samuraje, wojownicy Japonii, byli znani z niezwykłej dyscypliny, honoru i oddania. Żyli zgodnie z kodeksem Bushido, który kładł nacisk na cnoty takie jak lojalność, szacunek, uczciwość i odwaga. Filozofia samurajów była głęboko zakorzeniona w ich codziennym życiu i działaniach, zarówno na polu bitwy, jak i w życiu osobistym.</p>
+            <p>Chociaż samuraje byli doskonałymi wojownikami, ich filozofia życia była pełna subtelności. Dążyli do wewnętrznego spokoju i harmonii, wykorzystując swoją siłę w celu ochrony tych, którzy nie mieli możliwości obrony. "Zwycięstwo w wojnie to tylko część drogi samuraja. Prawdziwa siła to panowanie nad sobą", mówi stare przysłowie.</p>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<div class="image-container" data-aos="fade-up">
+    <img src="https://via.placeholder.com/800x500.png/000000/FFFFFF?text=Samurai+Image+1" alt="Samurai Image 1">
+    <div class="quote">"Moc w spokoju, spokój w mocy."</div>
+</div>
+
+</body>
+</html>
